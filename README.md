@@ -22,3 +22,5 @@ func main() {
   }
 }
 ```
+
+![Screenshot](https://lachlan.me/s/9TMZWTYGikXoeCHm8RBgi8Bb0o4R1Bz6uI.png)
