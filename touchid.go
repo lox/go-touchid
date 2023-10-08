@@ -25,6 +25,9 @@ int Authenticate(char const* reason) {
         }
         dispatch_semaphore_signal(sema);
       }];
+  } else {
+    result = 3;
+    dispatch_semaphore_signal(sema);
   }
 
   dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
@@ -50,6 +53,8 @@ func Authenticate(reason string) (bool, error) {
 		return true, nil
 	case 2:
 		return false, nil
+	case 3:
+		return true, nil
 	}
 
 	return false, errors.New("Error occurred accessing biometrics")
